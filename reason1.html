@@ -6,78 +6,96 @@
     <title>Document</title>
 </head>
 <body>
-<div>
-    <h1>br</h1>
-    <p style="margin-bottom: 50px;">
-        HTML의 &lt;br&gt; 태그는 **줄바꿈(break)**을 나타내는 요소로,
-        텍스트를 다음 줄로 이동시키는 데 사용됩니다.
-        &lt;br&gt;는 단일 태그로 작성되며 닫는 태그가 필요하지 않습니다.
-    </p>
-    <h2 >주요 특징</h2>
-    <div style="margin-bottom: 50px;">
-    <p>
-        <h3>1.빈 태그(Self-closing Tag)</h3>
-        &lt;br&gt;는 닫는 태그 없이 사용됩니다.
+    <div>
+        <div style="margin-bottom: 100px;">
+            <h1>&lt;pre&gt;</h1>
+            <p>HTML의 &lt;pre&gt; 태그는 **"preformatted text"**를 나타내며, 
+             입력된 텍스트를 작성된 그대로 브라우저에 렌더링합니다.<br>
+             여기에는 공백, 줄바꿈, 탭 등이 포함됩니다.
+            기본적으로 고정 폭 글꼴(monospaced font)이 적용되며, 텍스트 포맷팅이 유지됩니다.</p>
+        </div>
+        <div style="margin-bottom: 100px;">
+            <h2>주요 특징</h2>
+            <p>
+                <h3>1.공백과 줄바꿈 유지</h3>
+                &lt;pre&gt; 태그 안에 작성된 텍스트는 HTML에서 기본적으로 무시되는 공백과 줄바꿈을 그대로 유지합니다.
+                    작성한 텍스트의 포맷이 화면에 그대로 나타납니다.
+            </p>
+            <p>
+                <h3>2.고정 폭 글꼴 (Monospace Font)</h3>
+                대부분의 브라우저에서 &lt;pre&gt; 태그 내부 텍스트는 기본적으로 고정 폭 글꼴(예: Courier)로 표시됩니다.
+            </p>
+            <p>
+                <h3>3.자동 줄바꿈 없음</h3>
+                &lt;pre&gt; 태그 내부의 텍스트는 너비를 넘어가는 경우 자동으로 줄바꿈되지 않습니다. CSS를 사용해 제어할 수 있습니다.
+            </p> 
+        </div>
+        <div style="margin-bottom: 100px;">
+            
+                <h3>기본 사용 예제</h3>
+                <pre>
+                    This    is    preformatted
+                    text.
+                    It preserves line breaks, 
+                            tabs, and spaces.
+                </pre>
+                <p>
+                This    is    preformatted
+                text.
+                It preserves line breaks, 
+                        tabs, and spaces.
+                </p>    
+        </div>
+        <div style="margin-bottom: 100px;">
+            <h3>HTML 코드 표시 예제</h3>
+            <p>코드 조각을 표현할 때 유용합니다.</p>
+            <pre>
+                &lt;html&gt;
+                  &lt;head&gt;
+                    &lt;title&gt;Example&lt;/title&gt;
+                  &lt;/head&gt;
+                  &lt;body&gt;
+                    Hello, World!
+                  &lt;/body&gt;
+                &lt;/html&gt;
+            </pre>
+        </div>
+        <div style="margin-bottom: 100px;">
+            <h3>CSS를 사용한 스타일링</h3>
+            <p>  &lt;pre&gt; 태그의 기본 동작을 변경하거나 추가 스타일을 적용할 수 있습니다.</p>
 
-        <p>이것은 첫 번째 줄입니다.<br>이것은 두 번째 줄입니다.</p>
-    </p>
+            <h4>고정 폭 글꼴 변경</h4>
+            <pre style="font-family: Consolas, 'Courier New', monospace; font-size: 14px;">
+                Preformatted text with custom font.
+            </pre>
+
+            <h4>텍스트 자동 줄바꿈 활성화</h4>
+            <pre style="white-space: pre-wrap;">
+                This is a very long line of text that will wrap to the next line when it reaches the end of the container.
+            </pre>
+            <h4>스크롤바 추가</h4>
+            <pre style="overflow: auto; border: 1px solid #ccc; padding: 10px;">
+                Long preformatted text that requires scrolling to view everything.
+            </pre>
+        </div>
+        <div>
+            <h4>비교: pre vs code</h4>
+            <p>
+                <pre>: 텍스트 포맷팅을 그대로 유지합니다. 주로 코드 블록을 포함하거나, 
+                    고정된 레이아웃의 텍스트를 표시하는 데 사용됩니다.
+                <code>: 한 줄 코드나 코드 조각을 인라인으로 표시할 때 사용됩니다. 
+                    포맷팅은 유지되지 않습니다.
+            </p>
+            <pre>
+                <code>
+                function helloWorld() {
+                  console.log("Hello, World!");
+                }
+                </code>
+            </pre>
+        </div>
     </div>
-<div style="margin-bottom: 50px;">
-    <p >
-        <h3>줄바꿈 효과</h3>
 
-텍스트를 다음 줄로 강제로 이동시킵니다.
-문장 사이에 공백 대신 줄바꿈이 필요할 때 사용됩니다.
-    </p>
-</div>
-<div style="margin-bottom: 50px;">
-    <p>
-        <h3>시맨틱하지 않은 요소</h3>
-&lt;br&gt;는 단순히 시각적인 줄바꿈을 제공하며, 시맨틱하지는 않습니다.
-의미를 전달하거나 구조적인 목적으로 사용하지 않는 것이 좋습니다.
-    </p>
-</div>
-<div style="margin-bottom: 50px;">
-    <h2 style="margin-top: 100px;"> 사용 사례</h2>
-    <p>
-        <h3>1. 시각적인 줄바꿈</h3>
-        문단을 나누지 않고, 텍스트의 줄바꿈이 필요한 경우 사용합니다.
 
-        <p>안녕하세요!<br>환영합니다!</p>
-    </p>
-</div>
-<div style="margin-bottom: 50px;">
-    <p>
-        <h3>2. 주소 표시</h3>
-        주소나 시 구분처럼 줄바꿈이 필요한 경우에 적합합니다.
-
-<p>123 Main Street<br>City, State 12345<br>Country</p>
-</div>
-<div style="margin-bottom: 50px;">
-    </p>
-    <p>
-        <h3>3. 시나 대사 작성</h3>
-        시나 대사 등에서 줄바꿈을 표현하는 데 유용합니다.
-
-        <p>나의 마음은<br>하늘 높이 떠 있는<br>구름과 같도다.</p>
-    </p>
-</div>
-<div style="margin-bottom: 50px;">
-    <p>
-        스타일링  &lt;br&gt; 태그<br>
-        &lt;br&gt; 태그 자체는 스타일을 적용할 수 없지만, 줄 간격은 CSS를 사용해 조정할 수 있습니다.
-
-      
-        <style>
-         p {
-              line-height: 1.5;
-            }
-        </style>
-
-        <p>이것은 첫 번째 줄입니다.<br>이것은 두 번째 줄입니다.</p>
-    </p>
-</div>
-
-</div>
 </body>
 </html>
