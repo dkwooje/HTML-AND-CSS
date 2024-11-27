@@ -7,71 +7,77 @@
 </head>
 <body>
 <div>
+    <h1>br</h1>
+    <p style="margin-bottom: 50px;">
+        HTML의 &lt;br&gt; 태그는 **줄바꿈(break)**을 나타내는 요소로,
+        텍스트를 다음 줄로 이동시키는 데 사용됩니다.
+        &lt;br&gt;는 단일 태그로 작성되며 닫는 태그가 필요하지 않습니다.
+    </p>
+    <h2 >주요 특징</h2>
+    <div style="margin-bottom: 50px;">
+    <p>
+        <h3>1.빈 태그(Self-closing Tag)</h3>
+        &lt;br&gt;는 닫는 태그 없이 사용됩니다.
 
-        <h1>hr</h1>
-        <p  style="margin-bottom: 100px;">
-            hr 태그는 **수평선(horizontal rule)**을 생성하는 데 사용됩니다. 
-            이는 문서에서 콘텐츠를 시각적으로 구분하거나 섹션을 나누는 역할을 합니다.
-        </p>
-        <h2>주요 특징</h2>
-        <p >
-            <h3>1.빈 태그 (Self-closing Tag)</h3>
+        <p>이것은 첫 번째 줄입니다.<br>이것은 두 번째 줄입니다.</p>
+    </p>
+    </div>
+<div style="margin-bottom: 50px;">
+    <p >
+        <h3>줄바꿈 효과</h3>
 
-            hr 태그는 닫는 태그 없이 단독으로 사용됩니다.
-            HTML5에서는 단순히 hr로 사용하며, XHTML 스타일에서는 hr 로 작성할 수 있습니다.
-            hr
-        </p>
-        <p >
-        <h3> 2.의미론적 역할 (Semantic)</h3>
+텍스트를 다음 줄로 강제로 이동시킵니다.
+문장 사이에 공백 대신 줄바꿈이 필요할 때 사용됩니다.
+    </p>
+</div>
+<div style="margin-bottom: 50px;">
+    <p>
+        <h3>시맨틱하지 않은 요소</h3>
+&lt;br&gt;는 단순히 시각적인 줄바꿈을 제공하며, 시맨틱하지는 않습니다.
+의미를 전달하거나 구조적인 목적으로 사용하지 않는 것이 좋습니다.
+    </p>
+</div>
+<div style="margin-bottom: 50px;">
+    <h2 style="margin-top: 100px;"> 사용 사례</h2>
+    <p>
+        <h3>1. 시각적인 줄바꿈</h3>
+        문단을 나누지 않고, 텍스트의 줄바꿈이 필요한 경우 사용합니다.
 
-          HTML5에서는 hr 태그가 문단 수준의 분리나 주제 전환을 나타내는 시맨틱한 요소로 간주됩니다.
-        </p>
-        <p >
-        <h3> 3.기본 스타일</h3>
+        <p>안녕하세요!<br>환영합니다!</p>
+    </p>
+</div>
+<div style="margin-bottom: 50px;">
+    <p>
+        <h3>2. 주소 표시</h3>
+        주소나 시 구분처럼 줄바꿈이 필요한 경우에 적합합니다.
 
-            브라우저에서 기본적으로 회색 또는 검은색의 선으로 표시됩니다.
-            선의 두께, 색상, 스타일 등은 CSS로 변경할 수 있습니다.
-        </p>
-        <p style="margin-top: 100px;">
-        <h3>4.기본 선</h3>
-            <p>위의 내용</p>
-            <hr>
-            <p>아래의 내용</p>
-        </p>
-        <p style="margin-top: 100px;">
-        <h3>5. CSS를 사용한 사용자 정의</h3>
-            CSS를 사용하여 선의 모양을 변경할 수 있습니다.
+<p>123 Main Street<br>City, State 12345<br>Country</p>
+</div>
+<div style="margin-bottom: 50px;">
+    </p>
+    <p>
+        <h3>3. 시나 대사 작성</h3>
+        시나 대사 등에서 줄바꿈을 표현하는 데 유용합니다.
 
-            두께, 색상, 스타일 변경
-            <hr style="border: 1px solid black;">
-            가로 길이 설정
-            <hr style="width: 50%;">
-            정렬
-            <hr style="width: 50%; margin-left: auto; margin-right: auto;">
-            색상과 높이 조정
-            <hr style="border: none; height: 2px; background-color: blue;">
-            점선 또는 대시 스타일
-            <hr style="border: 1px dashed gray;">
-        </p>
-        <p style="margin-top: 100px;">
-        <h3>6. CSS를 사용한 고급 예제</h3>
-            <style>
-  .custom-hr {
-    border: none;
-    height: 3px;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    margin: 20px 0;
-  }
-</style>
+        <p>나의 마음은<br>하늘 높이 떠 있는<br>구름과 같도다.</p>
+    </p>
+</div>
+<div style="margin-bottom: 50px;">
+    <p>
+        스타일링  &lt;br&gt; 태그<br>
+        &lt;br&gt; 태그 자체는 스타일을 적용할 수 없지만, 줄 간격은 CSS를 사용해 조정할 수 있습니다.
 
-<p>위의 내용</p>
-<hr class="custom-hr">
-<p>아래의 내용</p>
-        </p>
-        <p >
-            
-        </p>
-    
+      
+        <style>
+         p {
+              line-height: 1.5;
+            }
+        </style>
+
+        <p>이것은 첫 번째 줄입니다.<br>이것은 두 번째 줄입니다.</p>
+    </p>
+</div>
+
 </div>
 </body>
 </html>
