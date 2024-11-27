@@ -6,63 +6,43 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="margin-bottom: 50px;">
-        <h1>&lt;b&gt; (Bold Text)</h1>
-        <p>
-            기능: 텍스트를 굵게 표시합니다.<br>
-            의미: 단순히 시각적으로 텍스트를 굵게 표시하기 위한 요소로, 의미론적 중요성을 전달하지 않습니다.<br>
-            사용 목적: 키워드 강조.
-            시각적으로 중요한 정보 강조.
-            장식 목적으로 굵게 표시.
-
-            <p>이 단어는 <b>굵게</b> 표시됩니다.</p>
-        </p>
+    <div>
+        <h1>&lt;i&&gt;</h1>
+        <p>HTML에서 <i>와 <em> 요소는 모두 텍스트를 기울임꼴로 표시하는 데 사용되지만, 
+           두 요소는 의미와 사용 목적에서 차이가 있습니다.</p>
     </div>
-    <div style="margin-bottom: 50px;">
-        <h1>&lt;strong&gt; (Strong Importance)</h1>
-        <p>
-            기능: 텍스트를 굵게 표시합니다.<br>
-            의미: 텍스트가 문서에서 중요하다는 의미를 전달합니다.<br>
-            &lt;strong&gt;은 시맨틱(Semantic) 요소로, 스크린 리더와 같은 접근성 도구에서 "강조"로 읽힙니다.
-            의미론적 중요성이 필요할 때 사용해야 합니다.
-            사용 목적:중요하거나 주의가 필요한 정보 강조. 경고나 알림 메시지에 사용.
-
-            <p>이 단어는 <strong>매우 중요</strong>합니다.</p>
-        </p>
+    <div>
+        <h2>1. <i> (Italic Text) </h2>
+            <p>
+                기능: 텍스트를 기울임꼴로 표시합니다.<br>
+                의미: 시각적 효과만 제공하며, 특정 강조나 의미를 전달하지는 않습니다.<br>
+                사용 목적:<br>
+                1.기술 용어나 외국어 단어 강조.<br>
+                2.제목, 영화 이름, 책 이름 등 구분 필요.<br>
+                3.스타일 장식 목적으로 텍스트 기울임.
+            </p>
+          
+            <p>이 단어는 <i>기울임꼴</i>로 표시됩니다.</p>
+       
+            
+        <h2>2. <em> (Emphasized Text)</h2> 
+            <p>
+                기능: 텍스트를 기울임꼴로 표시합니다.<br>
+                의미: 문맥상 강조가 필요한 텍스트를 나타냅니다.<br>
+                의미론적(Semantic) 요소로, 스크린 리더와 같은 접근성 도구에서 강조로 읽힙니다.<br>
+                사용 목적:<br>
+                1.사용자에게 중요한 정보를 강조.<br>
+                2.문맥이나 상황에서 특별히 주의가 필요한 텍스트.
+            </p>
+           
+            <p>이 단어는 <em>매우 중요</em>합니다.</p>
+            <br>
+            
+            <p>단순한 기울임꼴은 <i>이렇게</i> 표시되며, 문맥적으로 중요한 내용은 <em>이렇게</em> 표시됩니다.</p>
     </div>
-    <div style="margin-bottom: 50px;">
-        <h1>구분</h1>
-        <table style="width: 60%; height: 50%;">
-            <thead>
-                <th>구분</th>
-                <th>&lt;b&gt;</th>
-                <th>&lt;strong&gt;</th>
-            </thead>
-            <tbody>
-                <td>시각적 효과</td>
-                <td>텍스트를 굵게 표시</td>
-                <td>텍스트를 굵게 표시</td>
-            </tbody>
-            <tbody>
-                <td>의미론적 강조</td>
-                <td>없음</td>
-                <td>문서에서 의미적으로 중요</td>
-            </tbody>
-            <tbody>
-                <td>접근성 도구 지원</td>
-                <td>단순히 텍스트를 읽음</td>
-                <td>중요 텍스트로 인식해 강조</td>
-            </tbody>
-            <tbody>
-                <td>사용 사례</td>
-                <td>시각적인 강조(장식 목적)</td>
-                <td>중요한 정보(의미 전달) 강조</td>
-            </tbody>
-        </table>
-    </div>
-    <div style="margin-bottom: 50px;">
-        <p>CSS로 구현</p>
-        <p style="font-weight: bold;">이 텍스트는 CSS로 굵게 표시됩니다.</p>
+    <div>
+        <h3>CSS로</h3>
+        <p style="font-style: italic;">이 텍스트는 CSS로 기울임꼴입니다.</p>
     </div>
 </body>
 </html>
