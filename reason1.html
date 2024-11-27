@@ -7,266 +7,62 @@
 </head>
 <body>
     <div style="margin-bottom: 50px;">
-        <h1>Style</h1>
+        <h1>&lt;b&gt; (Bold Text)</h1>
         <p>
-            HTML의 style 속성은 HTML 요소에 인라인 스타일을 적용하는 데 사용됩니다.
-            CSS(Cascading Style Sheets)를 직접 HTML 요소에 작성하여 해당 요소의 디자인이나
-            레이아웃을 제어할 수 있습니다.
+            기능: 텍스트를 굵게 표시합니다.<br>
+            의미: 단순히 시각적으로 텍스트를 굵게 표시하기 위한 요소로, 의미론적 중요성을 전달하지 않습니다.<br>
+            사용 목적: 키워드 강조.
+            시각적으로 중요한 정보 강조.
+            장식 목적으로 굵게 표시.
+
+            <p>이 단어는 <b>굵게</b> 표시됩니다.</p>
         </p>
     </div>
     <div style="margin-bottom: 50px;">
-        <h3>텍스트 관련</h3>
-        <table>
+        <h1>&lt;strong&gt; (Strong Importance)</h1>
+        <p>
+            기능: 텍스트를 굵게 표시합니다.<br>
+            의미: 텍스트가 문서에서 중요하다는 의미를 전달합니다.<br>
+            &lt;strong&gt;은 시맨틱(Semantic) 요소로, 스크린 리더와 같은 접근성 도구에서 "강조"로 읽힙니다.
+            의미론적 중요성이 필요할 때 사용해야 합니다.
+            사용 목적:중요하거나 주의가 필요한 정보 강조. 경고나 알림 메시지에 사용.
+
+            <p>이 단어는 <strong>매우 중요</strong>합니다.</p>
+        </p>
+    </div>
+    <div style="margin-bottom: 50px;">
+        <h1>구분</h1>
+        <table style="width: 60%; height: 50%;">
             <thead>
-                <tr>
-                    <th>속성</th>
-                    <th>설명</th>
-                    <th>예시</th>
-                </tr>
+                <th>구분</th>
+                <th>&lt;b&gt;</th>
+                <th>&lt;strong&gt;</th>
             </thead>
             <tbody>
-                <tr style="color:red;">
-                    <td><code>color</code></td>
-                    <td>텍스트 색상을 설정.</td>
-                    <td><code>color: red;</code></td>
-                </tr>
-                <tr style="font-size: 20px;">
-                    <td><code>font-size</code></td>
-                    <td>텍스트 크기를 설정.</td>
-                    <td><code>font-size: 16px;</code></td>
-                </tr>
-                <tr style="font-weight: bold;">
-                    <td><code>font-weight</code></td>
-                    <td>글씨 두께를 설정. (<code>normal</code>, <code>bold</code>, 숫자값)</td>
-                    <td><code>font-weight: bold;</code></td>
-                </tr> 
-                <tr style="font-style: italic">
-                    <td><code>font-style</code></td>
-                    <td>글씨 스타일(기울임꼴) 설정. (<code>normal</code>, <code>italic</code>, <code>oblique</code>)</td>
-                    <td><code>font-style: italic;</code></td>
-                </tr>
-                <tr style="font-family: Arial, Helvetica, sans-serif;">
-                    <td><code>font-family</code></td>
-                    <td>글꼴을 설정.</td>
-                    <td><code>font-family: Arial, sans-serif;</code></td>
-                </tr>
-                <tr style="text-align: center;">
-                    <td><code>text-align</code></td>
-                    <td>텍스트 정렬. (<code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code>)</td>
-                    <td><code>text-align: center;</code></td>
-                </tr>
-                <tr style="text-decoration: underline;">
-                    <td><code>text-decoration</code></td>
-                    <td>텍스트 장식(밑줄, 취소선 등). (<code>none</code>, <code>underline</code>, <code>line-through</code>)</td>
-                    <td><code>text-decoration: underline;</code></td>
-                </tr>
-                <tr style="letter-spacing: 2px;">
-                    <td><code>letter-spacing</code></td>
-                    <td>글자 간격 조절.</td>
-                    <td><code>letter-spacing: 2px;</code></td>
-                </tr>
-                <tr style="line-height: 3;">
-                    <td><code>line-height</code></td>
-                    <td>줄 간격 조절.</td>
-                    <td><code>line-height: 1.5;</code></td>
-                </tr>
-                <tr style="white-space: nowrap;">
-                    <td><code>white-space</code></td>
-                    <td>공백 처리 방식. (<code>normal</code>, <code>nowrap</code>, <code>pre</code>, <code>pre-wrap</code>, <code>pre-line</code>)</td>
-                    <td><code>white-space: pre-wrap;</code></td>
-                </tr>
-                <tr style="word-spacing: 15px;">
-                    <td><code>word-spacing</code></td>
-                    <td>단어 간격 조절.</td>
-                    <td><code>word-spacing: 10px;</code></td>
-                </tr>
+                <td>시각적 효과</td>
+                <td>텍스트를 굵게 표시</td>
+                <td>텍스트를 굵게 표시</td>
+            </tbody>
+            <tbody>
+                <td>의미론적 강조</td>
+                <td>없음</td>
+                <td>문서에서 의미적으로 중요</td>
+            </tbody>
+            <tbody>
+                <td>접근성 도구 지원</td>
+                <td>단순히 텍스트를 읽음</td>
+                <td>중요 텍스트로 인식해 강조</td>
+            </tbody>
+            <tbody>
+                <td>사용 사례</td>
+                <td>시각적인 강조(장식 목적)</td>
+                <td>중요한 정보(의미 전달) 강조</td>
             </tbody>
         </table>
     </div>
     <div style="margin-bottom: 50px;">
-        <h2>2. 배경 및 색상</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>속성</th>
-                    <th>설명</th>
-                    <th>예시</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="background-color: green;">
-                    <td><code>background-color</code></td>
-                    <td>배경색 설정.</td>
-                    <td><code>background-color: #f0f0f0;</code></td>
-                </tr>
-                <tr style="background-image: url(./image/orange.webp);">
-                    <td><code>background-image</code></td>
-                    <td>배경 이미지 설정.</td>
-                    <td><code>background-image: url('image.jpg');</code></td>
-                </tr>
-                <tr style="background-size: auto; background-image: url(./image/orange.webp);" >
-                    <td><code>background-size</code></td>
-                    <td>배경 이미지 크기 설정. (<code>cover</code>, <code>contain</code>, <code>auto</code>)</td>
-                    <td><code>background-size: cover;</code></td>
-                </tr>
-                <tr style="background-repeat: repeat; background-image: url(./image/orange.webp);">
-                    <td><code>background-repeat</code></td>
-                    <td>배경 이미지 반복 설정. (<code>repeat</code>, <code>no-repeat</code>, <code>repeat-x</code>, <code>repeat-y</code>)</td>
-                    <td><code>background-repeat: no-repeat;</code></td>
-                </tr>
-                <tr style="background-position: center; background-image: url(./image/orange.webp);">
-                    <td><code>background-position</code></td>
-                    <td>배경 이미지 위치 설정.</td>
-                    <td><code>background-position: center;</code></td>
-                </tr>
-                <tr style="background-attachment: fixed; background-image: url(./image/orange.webp);">
-                    <td><code>background-attachment</code></td>
-                    <td>배경 고정 여부. (<code>scroll</code>, <code>fixed</code>, <code>local</code>)</td>
-                    <td><code>background-attachment: fixed;</code></td>
-                </tr>
-                <tr style="opacity: 0.5; background-image: url(./image/orange.webp);">
-                    <td><code>opacity</code></td>
-                    <td>요소의 투명도 설정. (0부터 1)</td>
-                    <td><code>opacity: 0.5;</code></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div style="margin-bottom: 50px;">
-        <h2>3. 박스 모델</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>속성</th>
-                    <th>설명</th>
-                    <th>예시</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>width</code></td>
-                    <td>요소의 너비 설정. (<code>px</code>, <code>%</code>, <code>em</code>, <code>vw</code>, <code>vh</code> 등)</td>
-                    <td><code>width: 100%;</code></td>
-                </tr>
-                <tr>
-                    <td><code>height</code></td>
-                    <td>요소의 높이 설정.</td>
-                    <td><code>height: 50px;</code></td>
-                </tr>
-                <tr>
-                    <td><code>margin</code></td>
-                    <td>요소의 외부 여백 설정. (<code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> 순서로 작성)</td>
-                    <td><code>margin: 10px 15px;</code></td>
-                </tr>
-                <tr>
-                    <td><code>padding</code></td>
-                    <td>요소의 내부 여백 설정.</td>
-                    <td><code>padding: 5px 10px;</code></td>
-                </tr>
-                <tr>
-                    <td><code>border</code></td>
-                    <td>요소의 테두리 설정. (두께, 스타일, 색상)</td>
-                    <td><code>border: 1px solid red;</code></td>
-                </tr>
-                <tr>
-                    <td><code>box-shadow</code></td>
-                    <td>박스 그림자 설정. (<code>x</code>, <code>y</code>, 흐림 정도, 색상)</td>
-                    <td><code>box-shadow: 2px 2px 5px gray;</code></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div style="margin-bottom: 50px;">
-        <h2>4. 플렉스박스(Flexbox) 및 레이아웃</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>속성</th>
-                    <th>설명</th>
-                    <th>예시</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>display</code></td>
-                    <td>요소의 박스 유형 설정. (<code>block</code>, <code>inline</code>, <code>flex</code>, <code>grid</code> 등)</td>
-                    <td><code>display: flex;</code></td>
-                </tr>
-                <tr>
-                    <td><code>justify-content</code></td>
-                    <td>플렉스 아이템의 정렬 방식 설정. (<code>flex-start</code>, <code>center</code>, <code>space-between</code>)</td>
-                    <td><code>justify-content: center;</code></td>
-                </tr>
-                <tr>
-                    <td><code>align-items</code></td>
-                    <td>플렉스 아이템의 세로 정렬 방식 설정. (<code>flex-start</code>, <code>center</code>, <code>stretch</code>)</td>
-                    <td><code>align-items: stretch;</code></td>
-                </tr>
-                <tr>
-                    <td><code>flex</code></td>
-                    <td>플렉스 아이템의 크기 비율 설정.</td>
-                    <td><code>flex: 1;</code></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div style="margin-bottom: 50px;">
-        <h2>5. 표 관련 속성</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>속성</th>
-                    <th>설명</th>
-                    <th>예시</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>border-collapse</code></td>
-                    <td>테이블 테두리 결합 여부 설정.</td>
-                    <td><code>border-collapse: collapse;</code></td>
-                </tr>
-                <tr>
-                    <td><code>border-spacing</code></td>
-                    <td>셀 간의 간격 설정.</td>
-                    <td><code>border-spacing: 10px;</code></td>
-                </tr>
-                <tr>
-                    <td><code>caption-side</code></td>
-                    <td>테이블 캡션 위치 설정. (<code>top</code>, <code>bottom</code>)</td>
-                    <td><code>caption-side: top;</code></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div style="margin-bottom: 50px;">
-        <h2>6. 변환(Transform) 및 애니메이션</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>속성</th>
-                    <th>설명</th>
-                    <th>예시</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><code>transform</code></td>
-                    <td>요소 변환. (<code>rotate</code>, <code>scale</code>, <code>translate</code>)</td>
-                    <td><code>transform: rotate(45deg);</code></td>
-                </tr>
-                <tr>
-                    <td><code>transition</code></td>
-                    <td>애니메이션 효과 적용.</td>
-                    <td><code>transition: all 0.3s ease;</code></td>
-                </tr>
-                <tr>
-                    <td><code>animation</code></td>
-                    <td>복잡한 애니메이션 설정.</td>
-                    <td><code>animation: slidein 3s;</code></td>
-                </tr>
-            </tbody>
-        </table>
+        <p>CSS로 구현</p>
+        <p style="font-weight: bold;">이 텍스트는 CSS로 굵게 표시됩니다.</p>
     </div>
 </body>
 </html>
