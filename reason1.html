@@ -8,70 +8,64 @@
 <body>
     <div>
         <div>
-            <h1>&lt;cite&gt;</h1>
+            <h1>&lt;bdo&gt;</h1>
             <p>
-                HTML의 &lt;cite&gt; 요소는 **창작물(문서, 영화, 책, 예술 작품 등)**의 출처 또는 제목을 나타낼 때 사용됩니다.<br>
-                주로 인용문이나 참조된 자료의 제목을 명시하기 위해 사용됩니다. <br>
-                &lt;cite&gt;는 의미론적인 태그로, 창작물의 이름을 명확히 전달할 때 적합합니다.<br>
+             HTML의 <bdo> 요소는 Bidirectional Override의 약자로, 텍스트의 방향을<br>
+             명시적으로 지정하거나 덮어쓸 때 사용됩니다.<br>
+            이 태그는 텍스트의 읽기 방향을 기본 흐름(좌에서 우, 우에서 좌)과 다르게 설정해야 할 경우에 유용합니다.
             </p>
         </div>
         <div>
             <h3>주요 특징</h3>
             <tr>
-                <th>1.용도</th>
+                <th>텍스트 방향 강제 지정</th>
                 <td>
                     <ul>
-                        <li>책, 영화, 논문, 기사, 예술 작품, 음악 앨범 등의 제목을 나타냅니다.</li>
-                        <li>인용문의 출처를 명시할 때 함께 사용됩니다.</li>
+                        <li>텍스트 방향이 문서의 기본 방향과 다를 때 사용합니다.</li>
+                        <li>예: 좌에서 우(LTR, Left-to-Right) → 우에서 좌(RTL, Right-to-Left).</li>
                     </ul>
                 </td>
             </tr>
             <tr>
-                <th>2.자동 스타일</th>
+                <th>dir 속성</th>
                 <td>
                     <ul>
-                        <li>브라우저에서 기본적으로 기울임체로 표시됩니다.</li>
-                        <li>스타일링은 필요에 따라 변경할 수 있습니다.</li>
+                        <li>dir="ltr": 왼쪽에서 오른쪽(LTR).</li>
+                        <li>dir="rtl": 오른쪽에서 왼쪽(RTL).</li>
+                        <li>방향을 강제로 설정.</li>
                     </ul>
                 </td>
             </tr>
             <tr>
-                <th>3.SEO와 접근성</th>
+                <th>다국어 텍스트</th>
                 <td>
                     <ul>
-                        <li>검색 엔진과 보조 기술(스크린 리더)은 &lt;cite&gt;를 창작물의 제목으로 인식하여 문서의 의미를 명확히 전달합니다.</li>
+                        <li>혼합된 언어(예: 아랍어, 히브리어와 영어 등)에서 텍스트가 엉키지 않도록 제어.</li>
                     </ul>
                 </td>
             </tr>
         </div>
         <div>
-            <h3>기본 예제</h3>
-
-            <b>1. 창작물의 제목</b>
-            <p>나는 <cite>어린 왕자</cite>를 읽는 것을 좋아합니다.</p>
-
-            <b>2. 인용문의 출처</b>
-            <blockquote>
-                "사람은 목표를 잃으면 방황하게 된다."
-                <cite> - 니체</cite>
-            </blockquote>
+            <h3>기본 문법</h3>
+            <p>기본 방향 텍스트: HTML은 기본적으로 왼쪽에서 오른쪽(LTR) 방향입니다.</p>
+            <p>강제 방향: <bdo dir="rtl">HTML</bdo>은 오른쪽에서 왼쪽(RTL)으로 표시됩니다.</p>
+        </div>
+        <div>
+            <h3>사용 예제</h3>
+            <p>영어와 아랍어 혼합 텍스트: <bdo dir="rtl">Hello, مرحبا</bdo></p>
+            <p>정상: 12345</p>
+            <p>뒤집힌 숫자: <bdo dir="rtl">12345</bdo></p>
         </div>
         <div>
             <h3>스타일링</h3>
             <style>
-                #citename {
-                    font-style: normal; /* 기울임체 제거 */
-                    color: #007BFF; /* 텍스트 색상 변경 */
+                bdoname {
+                    color: blue;
+                    font-weight: bold;
                 }
             </style>
             
-            <p>나는 <cite id="citename">해리 포터</cite> 시리즈를 다시 읽고 있습니다.</p>
-        </div>
-        <div>
-            <h3>실생활 활용 예</h3>
-            <p>이 내용은 <cite>BBC 뉴스</cite>에서 발췌한 것입니다.</p>
-            <p>더 많은 정보를 원하신다면 <cite>Computer Science: An Overview</cite>를 참조하세요.</p>
-            <p>영화 <cite>인셉션</cite>은 정말 혁신적입니다.</p>
+            <p>방향 제어: <bdo id="bdoname" dir="rtl">텍스트 방향을 강제로 바꿉니다.</bdo></p>
         </div>
     </div>
 </body>
