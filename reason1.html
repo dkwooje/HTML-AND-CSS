@@ -7,66 +7,77 @@
 </head>
 <body>
     <div>
-        <div>
-            <h1>&lt;sup&gt;</h1>
-            <p>
-                HTML &lt;sup&gt; 요소는 위 첨자(superscript)로 텍스트를 표시하는 데 사용됩니다.<br>
-                     이 태그를 사용하면 텍스트가 기준선 위로 올라가고 크기가 작아집니다.<br>
-                     주로 수학 공식, 단위, 그리고 각주와 같은 상황에서 사용됩니다.
-            </p>
-        </div>
-        <div>
-            <h3>주요 특징</h3>
-                    <tr>
-                        <th>1.용도</th>
-                        <td>
-                            <ul>
-                                <li>수학 공식: x<sup>2</sup>, E=mc<sup>2</sup></li>
-                                <li>단위 표기: m<sup>3</sup>, cm<sup>2</sup></li>
-                                <li>각주: 문장<sup>1</sup>, 단어<sup>2</sup></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>2.스타일링</th>
-                        <td>
-                            <ul>
-                                <li>
-                                    텍스트가 기준선 위로 올라가며, 기본 글자 크기보다 작게 표시됩니다.
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>3.브라우저 지원</th>
-                        <td>
-                            <ul>
-                                <li>
-                                    모든 주요 브라우저에서 지원됩니다.
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-        </div>
-        <div>
-            <h3>기본 예제</h3>
-            <p>수학 공식: E = mc<sup>2</sup></p>
-            <p>단위: 면적 = 5 cm<sup>2</sup></p>
-            <p>각주: 이 문장은 특별합니다<sup>1</sup>.</p>
-        </div>
-        <div>
-            <h3>스타일링 예제</h3>
-        <style>
-             .supname {
-                 font-size: 2em; /* 글자 크기 조정 */
-                color: red;       /* 텍스트 색상 변경 */
-                 }
-        </style>
-
-        <p>수학 공식: E = mc<sup class="supname">2</sup></p>
-        <p>단위: 면적 = 5 cm<sup class="supname">2</sup></p>
-        <p>각주: 이 문장은 특별합니다<sup>1</sup>.</p>
-        </div>
+        <h1>&lt;blockquote&gt;</h1>
+        <p>
+            HTML의 &lt;blockquote&gt; 요소는 긴 인용문(block quotation)을 나타낼 때 사용됩니다.<br>
+                 이 태그는 보통 다른 출처에서 가져온 텍스트를 문서에 인용하는 경우에 사용됩니다.<br>
+                 브라우저는 기본적으로 이 요소에 들여쓰기 스타일을 적용합니다.<br>
+        </p>
     </div>
+    <div>
+        <h3>주요 특징</h3>
+            <tr>
+                <th>1.용도</th>
+                <td>
+                    <ul>
+                        <li>긴 텍스트나 문장 전체를 인용할 때 사용됩니다.</li>
+                        <li>출처를 명시할 수 있는 cite 속성을 지원합니다.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>2.디자인</th>
+                <td>
+                    <ul>
+                        <li>기본적으로 들여쓰기가 적용됩니다.</li>
+                        <li>CSS로 추가 스타일을 지정할 수 있습니다.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>3.브라우저 지원</th>
+                <td>
+                    <ul>
+                        <li>모든 주요 브라우저에서 지원됩니다.</li>
+                    </ul>
+                </td>
+            </tr>
+    </div>
+    <div>
+        <h3>기본 문법</h3>
+        <blockquote>
+            "어디를 가든지 마음을 다해 가라." - 공자
+        </blockquote>
+        <p>
+            "어디를 가든지 마음을 다해 가라." - 공자
+        </p>
+    </div>
+    <div>
+        <h3>출처 추가하기 (cite 속성)</h3>
+        <blockquote cite="https://namu.wiki/w/%EC%86%8D%EB%8B%B4">
+            "성공은 준비와 기회의 만남이다."
+        </blockquote>
+        <p>
+            "성공은 준비와 기회의 만남이다."
+        </p>
+    </div>
+    <dif>
+        <h3>스타일링</h3>
+        <p>
+            <style>
+                .bolockname {
+                    font-style: italic; /* 기울임꼴 */
+                    color: #555; /* 텍스트 색상 */
+                    border-left: 4px solid #ccc; /* 왼쪽 테두리 */
+                    padding-left: 16px; /* 텍스트와 테두리 간 간격 */
+                    margin: 16px 0; /* 위아래 여백 */
+                }
+            </style>
+            
+            <blockquote id="bolockname">
+                "행동이 항상 행복을 가져오지는 않지만, 행동 없이는 행복이 없다."
+            </blockquote>
+        </p>
+    </dif>
 </body>
 </html>
