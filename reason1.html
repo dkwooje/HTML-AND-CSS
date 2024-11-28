@@ -8,68 +8,74 @@
 <body>
     <div>
         <div>
-            <h1>&lt;abbr&gt;</h1>
+            <h1>&lt;address&gt;</h1>
             <p>
-                HTML의 &lt;abbr&gt; 요소는 **약어(abbreviation)**를 나타낼 때 사용됩니다.<br>
-                     사용자가 해당 약어에 대해 더 자세한 설명을 알 수 있도록 전체 뜻이나 의미를 제공하는 데 유용합니다. <br>
-                    title 속성과 함께 사용하여 약어의 전체 내용을 명시할 수 있습니다.
+        HTML의 &lt;address&gt; 요소는 연락처 정보를 제공할 때 사용됩니다.<br>
+         보통 문서의 작성자나 관련된 기관의 정보를 나타내는 데 쓰입니다.<br>
+         연락처 정보는 이메일 주소, URL, 물리적 주소, 전화번호 등을 포함할 수 있습니다.<br>
             </p>
         </div>
         <div>
-           <h3>주요 특징</h3> 
+            <h3>주요 특징</h3>
             <tr>
-                <th>1.용도:</th>
+                <th>1.용도</th>
                 <td>
                     <ul>
-                        <li>약어의 의미를 명확히 전달.</li>
-                        <li>예: "HTML"이라는 약어의 전체 이름 "HyperText Markup Language"를 제공.</li>
+                        <li>문서의 작성자 또는 소유자의 연락처 정보를 명시.</li>
+                        <li>블로그, 회사 소개, 문의 페이지 등에 사용.</li>
                     </ul>
                 </td>
             </tr>
             <tr>
-                <th>2.title 속성</th>
+                <th>2.자동 스타일</th>
                 <td>
                     <ul>
-                        <li>약어의 풀네임 또는 의미를 제공.</li>
-                        <li>사용자가 마우스를 올리면 툴팁으로 표시됩니다.</li>
+                        <li>기본적으로 브라우저는 &lt;address&gt; 를 기울임체로 표시하며,<br>
+                            일부 브라우저에서는 줄 바꿈 스타일이 적용됩니다.</li>
                     </ul>
                 </td>
             </tr>
             <tr>
-                <th>3.접근성 향상</th>
+                <th>3.접근성</th>
                 <td>
                     <ul>
-                        <li>스크린 리더 등 보조 기술이 약어의 전체 의미를 읽어줌.</li>
-                        <li>SEO에도 유리.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>4. 브라우저 지원</th>
-                <td>
-                    <ul>
-                        <li>모든 주요 브라우저에서 지원.</li>
+                        <li>&lt;address&gt; 는 특정 정보를 나타내므로,<br>
+                        스크린 리더 등 보조 기술에서 의미를 명확히 전달할 수 있습니다.</li>
                     </ul>
                 </td>
             </tr>
         </div>
         <div>
-            <h3>기본 예제</h3>
-            <p>웹의 핵심 기술 중 하나는 <abbr title="HyperText Markup Language">HTML</abbr>입니다.</p>
+            <h3>기본 문법</h3>
+            <address>
+                작성자: 홍길동<br>
+                이메일: <a href="https://namu.wiki/w/%EA%B0%95%EB%82%A8%EA%B5%AC">강남구</a><br>
+                주소: 서울특별시 강남구 테헤란로 123<br>
+                전화: +82-10-1234-5678
+            </address>
         </div>
         <div>
-            <h3>CSS로 스타일링</h3>
-            <style>
-                #abbrname {
-                    color: red;
-                    border-bottom: 1px dotted; /* 점선 밑줄 추가 */
-                    cursor: help; /* 마우스를 올리면 도움말 포인터 표시 */
-                    text-decoration: none; /* 기본 스타일 제거 */
-                }
-            </style>
-            
-            <p>웹의 핵심 기술 중 하나는 <abbr id="abbrname" title="HyperText Markup Language">HTML</abbr>입니다.</p>
+            <h3>&lt;address&gt;와 관련 태그</h3>
+            <p>
+                <tr>
+                    <th>&lt;footer&gt;</th>
+                    <td>
+                        <ul>
+                            <li>문서의 하단에 주로 연락처 정보를 배치.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>&lt;a&gt;</th>
+                    <td>
+                        <ul>
+                            <li>이메일이나 웹사이트 URL에 링크를 추가.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </p>
         </div>
     </div>
+
 </body>
 </html>
