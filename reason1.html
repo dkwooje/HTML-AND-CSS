@@ -8,48 +8,65 @@
 <body>
     <div>
         <div>
-            <h1>&lt;sub&gt;</h1>
+            <h1>&lt;sup&gt;</h1>
             <p>
-                HTML &lt;sub&gt; 요소는 텍스트를 아래 첨자(subscript)로 표시할 때 사용됩니다. <br>
-                    보통 화학식, 수학 공식, 그리고 주석과 같은 상황에서 자주 사용됩니다. <br>
-                    이 태그를 적용하면 텍스트가 기준선 아래로 내려가고 크기가 작아집니다.
+                HTML &lt;sup&gt; 요소는 위 첨자(superscript)로 텍스트를 표시하는 데 사용됩니다.<br>
+                     이 태그를 사용하면 텍스트가 기준선 위로 올라가고 크기가 작아집니다.<br>
+                     주로 수학 공식, 단위, 그리고 각주와 같은 상황에서 사용됩니다.
             </p>
         </div>
         <div>
             <h3>주요 특징</h3>
-            <p>
-                <b>1.용도:</b>
-                    화학식 표현: H₂O, CO₂<br>
-                    수학 공식: aₙ, xᵢ<br>
-                    주석 번호: 단어₁, 문장₂<br>
-                <b>2.스타일링:</b>
-                텍스트가 기준선 아래로 이동하고, 기본 글자 크기보다 작게 표시됩니다.<br>
-                <b>3.지원:</b>
-                모든 주요 브라우저에서 지원됩니다.
-            </p>
+                    <tr>
+                        <th>1.용도</th>
+                        <td>
+                            <ul>
+                                <li>수학 공식: x<sup>2</sup>, E=mc<sup>2</sup></li>
+                                <li>단위 표기: m<sup>3</sup>, cm<sup>2</sup></li>
+                                <li>각주: 문장<sup>1</sup>, 단어<sup>2</sup></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>2.스타일링</th>
+                        <td>
+                            <ul>
+                                <li>
+                                    텍스트가 기준선 위로 올라가며, 기본 글자 크기보다 작게 표시됩니다.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>3.브라우저 지원</th>
+                        <td>
+                            <ul>
+                                <li>
+                                    모든 주요 브라우저에서 지원됩니다.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
         </div>
         <div>
             <h3>기본 예제</h3>
-            <p>화학식: H<sub>2</sub>O</p>
-            <p>수학식: a<sub>n</sub> = n + 1</p>
-            <p>주석: 이 문장은 특별합니다<sub>1</sub>.</p>
+            <p>수학 공식: E = mc<sup>2</sup></p>
+            <p>단위: 면적 = 5 cm<sup>2</sup></p>
+            <p>각주: 이 문장은 특별합니다<sup>1</sup>.</p>
         </div>
         <div>
             <h3>스타일링 예제</h3>
-            <p>
-                <style>
-                    .subname {
-                      font-size: 3em; /* 글자 크기 조정 */
-                      color: red;      /* 텍스트 색상 변경 */
-                    }
-                </style>
-                  
-                  <p>화학식: H<sub class="subname">2</sub>O</p>
-                  <p>수학식: a<sub class="subname">n</sub> = n + 1</p>
-            </p>
+        <style>
+             .supname {
+                 font-size: 2em; /* 글자 크기 조정 */
+                color: red;       /* 텍스트 색상 변경 */
+                 }
+        </style>
 
+        <p>수학 공식: E = mc<sup class="supname">2</sup></p>
+        <p>단위: 면적 = 5 cm<sup class="supname">2</sup></p>
+        <p>각주: 이 문장은 특별합니다<sup>1</sup>.</p>
         </div>
     </div>
-   
 </body>
 </html>
