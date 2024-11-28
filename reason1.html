@@ -8,28 +8,42 @@
 <body>
     <div>
         <div>
-            <h1>색상</h1>
-            <p>HTML에서 색상 기능은 텍스트, 배경, 테두리, 버튼 등의 다양한 요소에 색상을 적용할 수 있는 기능입니다.<br>
-                 HTML과 CSS를 활용하여 색상을 지정하며,<br>
-                 색상을 표현하는 방법은 여러 가지가 있습니다.
+            <h1>HTML CSS</h1>
+            <p>
+            HTML에서 CSS는 **스타일링(디자인)**을 적용하여 웹페이지를 시각적으로<br>
+            더 매력적이고 사용자 친화적으로 만드는 데 사용됩니다. <br>
+            CSS는 HTML 요소에 색상, 글꼴, 크기, 간격, 배치 등을 정의하고,<br>
+            다양한 애니메이션 효과와 반응형 디자인도 가능하게 합니다.<br>
             </p>
         </div>
         <div>
-            <h3>배경색</h3>
-            <h1 style="background-color:DodgerBlue;">Hello World</h1>
-            <p style="background-color:Tomato;">Lorem ipsum...</p>
+            <h3>1.인라인 CSS</h3>
+            <h1 style="color:blue;">A Blue Heading</h1>
+            <p style="color:red;">A red paragraph.</p>
+        </div>
+        <br>
+        <div>
+            <h3>2.내부 CSS</h3>
+            <style>
+                body {background-color: powderblue;}
+                #title   {color: yellow;}
+                #data    {color: purple;}
+            </style>
+
+            <h1 id="title">This is a heading</h1>
+            <p id="data">This is a paragraph.</p>
         </div>
         <div>
-            <h3>텍스트 색</h3>
-            <h1 style="color:Tomato;">Hello World</h1>
-            <p style="color:DodgerBlue;">Lorem ipsum...</p>
-            <p style="color:MediumSeaGreen;">Ut wisi enim...</p>
-        </div>
-        <div>
-            <h3>테두리 색</h3>
-            <h1 style="border:2px solid Tomato;">Hello World</h1>
-            <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
-            <h1 style="border:2px solid Violet;">Hello World</h1>
+            <h3>3.외부 CSS</h3>
+            <p>
+                헤드부분에 link로 하여금 외부 css파일에서 스타일 데이터를 가져온다.
+               
+                <pre>
+                    &lt;head&gt;
+                      &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;/head&gt;
+                </pre>
+            </p> 
         </div>
     </div>
 </body>
