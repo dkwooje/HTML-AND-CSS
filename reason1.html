@@ -8,64 +8,28 @@
 <body>
     <div>
         <div>
-            <h1>&lt;bdo&gt;</h1>
-            <p>
-             HTML의 <bdo> 요소는 Bidirectional Override의 약자로, 텍스트의 방향을<br>
-             명시적으로 지정하거나 덮어쓸 때 사용됩니다.<br>
-            이 태그는 텍스트의 읽기 방향을 기본 흐름(좌에서 우, 우에서 좌)과 다르게 설정해야 할 경우에 유용합니다.
+            <h1>색상</h1>
+            <p>HTML에서 색상 기능은 텍스트, 배경, 테두리, 버튼 등의 다양한 요소에 색상을 적용할 수 있는 기능입니다.<br>
+                 HTML과 CSS를 활용하여 색상을 지정하며,<br>
+                 색상을 표현하는 방법은 여러 가지가 있습니다.
             </p>
         </div>
         <div>
-            <h3>주요 특징</h3>
-            <tr>
-                <th>텍스트 방향 강제 지정</th>
-                <td>
-                    <ul>
-                        <li>텍스트 방향이 문서의 기본 방향과 다를 때 사용합니다.</li>
-                        <li>예: 좌에서 우(LTR, Left-to-Right) → 우에서 좌(RTL, Right-to-Left).</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>dir 속성</th>
-                <td>
-                    <ul>
-                        <li>dir="ltr": 왼쪽에서 오른쪽(LTR).</li>
-                        <li>dir="rtl": 오른쪽에서 왼쪽(RTL).</li>
-                        <li>방향을 강제로 설정.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>다국어 텍스트</th>
-                <td>
-                    <ul>
-                        <li>혼합된 언어(예: 아랍어, 히브리어와 영어 등)에서 텍스트가 엉키지 않도록 제어.</li>
-                    </ul>
-                </td>
-            </tr>
+            <h3>배경색</h3>
+            <h1 style="background-color:DodgerBlue;">Hello World</h1>
+            <p style="background-color:Tomato;">Lorem ipsum...</p>
         </div>
         <div>
-            <h3>기본 문법</h3>
-            <p>기본 방향 텍스트: HTML은 기본적으로 왼쪽에서 오른쪽(LTR) 방향입니다.</p>
-            <p>강제 방향: <bdo dir="rtl">HTML</bdo>은 오른쪽에서 왼쪽(RTL)으로 표시됩니다.</p>
+            <h3>텍스트 색</h3>
+            <h1 style="color:Tomato;">Hello World</h1>
+            <p style="color:DodgerBlue;">Lorem ipsum...</p>
+            <p style="color:MediumSeaGreen;">Ut wisi enim...</p>
         </div>
         <div>
-            <h3>사용 예제</h3>
-            <p>영어와 아랍어 혼합 텍스트: <bdo dir="rtl">Hello, مرحبا</bdo></p>
-            <p>정상: 12345</p>
-            <p>뒤집힌 숫자: <bdo dir="rtl">12345</bdo></p>
-        </div>
-        <div>
-            <h3>스타일링</h3>
-            <style>
-                bdoname {
-                    color: blue;
-                    font-weight: bold;
-                }
-            </style>
-            
-            <p>방향 제어: <bdo id="bdoname" dir="rtl">텍스트 방향을 강제로 바꿉니다.</bdo></p>
+            <h3>테두리 색</h3>
+            <h1 style="border:2px solid Tomato;">Hello World</h1>
+            <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+            <h1 style="border:2px solid Violet;">Hello World</h1>
         </div>
     </div>
 </body>
