@@ -8,60 +8,67 @@
 <body>
     <div>
         <div>
-            <h1>&lt;q&gt;</h1>
+            <h1>&lt;abbr&gt;</h1>
             <p>
-                HTML의 &lt;q&gt; 요소는 짧은 인용문을 나타내는 데 사용됩니다.<br>
-                &lt;q&gt;를 사용하면 브라우저가 자동으로 인용문 주위에 **큰따옴표(" ")**를 추가합니다. <br>
-                    이는 긴 인용문에 사용되는 &lt;blockquote&gt;와는 다릅니다.<br>
+                HTML의 &lt;abbr&gt; 요소는 **약어(abbreviation)**를 나타낼 때 사용됩니다.<br>
+                     사용자가 해당 약어에 대해 더 자세한 설명을 알 수 있도록 전체 뜻이나 의미를 제공하는 데 유용합니다. <br>
+                    title 속성과 함께 사용하여 약어의 전체 내용을 명시할 수 있습니다.
             </p>
         </div>
         <div>
-            <h3>주요 특징</h3> 
-                <tr>
-                    <th>1.용도:</th>
-                    <td>
-                        <ul>
-                            <li>짧은 문장이나 구절을 인용할 때 사용됩니다.</li>
-                            <li>자동으로 큰따옴표를 추가하여 인용문임을 명확히 나타냅니다.</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <th>2.자동 큰따옴표:</th>
-                    <td>
-                        <ul>
-                            <li>브라우저가 언어 설정(lang 속성)에 따라 적절한 큰따옴표 스타일을 렌더링합니다.</li>
-                            <li>예: 영어(US)에서는 " " 형식, 프랑스어에서는 « » 형식을 사용.</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <th>3.짧은 인용문에 적합:</th>
-                    <td>
-                        <ul>
-                            <li> 긴 인용문에는 &lt;blockquote&gt;를 사용하는 것이 더 적절합니다.</li>
-                        </ul>
-                    </td>
-                </tr>
+           <h3>주요 특징</h3> 
+            <tr>
+                <th>1.용도:</th>
+                <td>
+                    <ul>
+                        <li>약어의 의미를 명확히 전달.</li>
+                        <li>예: "HTML"이라는 약어의 전체 이름 "HyperText Markup Language"를 제공.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>2.title 속성</th>
+                <td>
+                    <ul>
+                        <li>약어의 풀네임 또는 의미를 제공.</li>
+                        <li>사용자가 마우스를 올리면 툴팁으로 표시됩니다.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>3.접근성 향상</th>
+                <td>
+                    <ul>
+                        <li>스크린 리더 등 보조 기술이 약어의 전체 의미를 읽어줌.</li>
+                        <li>SEO에도 유리.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>4. 브라우저 지원</th>
+                <td>
+                    <ul>
+                        <li>모든 주요 브라우저에서 지원.</li>
+                    </ul>
+                </td>
+            </tr>
         </div>
         <div>
-            <h3>기본예제</h3>
-            <p>그는 이렇게 말했다: <q>노력은 배신하지 않는다.</q></p>
-            <p>그는 이렇게 말했다: 노력은 배신하지 않는다.</p>
+            <h3>기본 예제</h3>
+            <p>웹의 핵심 기술 중 하나는 <abbr title="HyperText Markup Language">HTML</abbr>입니다.</p>
         </div>
         <div>
-            <h3>스타일링</h3>
+            <h3>CSS로 스타일링</h3>
+            <style>
+                #abbrname {
+                    color: red;
+                    border-bottom: 1px dotted; /* 점선 밑줄 추가 */
+                    cursor: help; /* 마우스를 올리면 도움말 포인터 표시 */
+                    text-decoration: none; /* 기본 스타일 제거 */
+                }
+            </style>
             
-                <style>
-                    #qname {
-                        quotes: "‘" "’" "“" "”"; /* 큰따옴표 스타일 변경, none 가능*/
-                        color: #ff00ff; /* 텍스트 색상 */
-                        font-style: italic; /* 기울임꼴 */
-                    }
-                </style>
-                
-                <p>그는 이렇게 말했다: <q id="qname">행복은 선택이다.</q></p>
-            
+            <p>웹의 핵심 기술 중 하나는 <abbr id="abbrname" title="HyperText Markup Language">HTML</abbr>입니다.</p>
         </div>
     </div>
 </body>
