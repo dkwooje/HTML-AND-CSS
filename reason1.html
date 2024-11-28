@@ -7,77 +7,62 @@
 </head>
 <body>
     <div>
-        <h1>&lt;blockquote&gt;</h1>
-        <p>
-            HTML의 &lt;blockquote&gt; 요소는 긴 인용문(block quotation)을 나타낼 때 사용됩니다.<br>
-                 이 태그는 보통 다른 출처에서 가져온 텍스트를 문서에 인용하는 경우에 사용됩니다.<br>
-                 브라우저는 기본적으로 이 요소에 들여쓰기 스타일을 적용합니다.<br>
-        </p>
-    </div>
-    <div>
-        <h3>주요 특징</h3>
-            <tr>
-                <th>1.용도</th>
-                <td>
-                    <ul>
-                        <li>긴 텍스트나 문장 전체를 인용할 때 사용됩니다.</li>
-                        <li>출처를 명시할 수 있는 cite 속성을 지원합니다.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>2.디자인</th>
-                <td>
-                    <ul>
-                        <li>기본적으로 들여쓰기가 적용됩니다.</li>
-                        <li>CSS로 추가 스타일을 지정할 수 있습니다.</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>3.브라우저 지원</th>
-                <td>
-                    <ul>
-                        <li>모든 주요 브라우저에서 지원됩니다.</li>
-                    </ul>
-                </td>
-            </tr>
-    </div>
-    <div>
-        <h3>기본 문법</h3>
-        <blockquote>
-            "어디를 가든지 마음을 다해 가라." - 공자
-        </blockquote>
-        <p>
-            "어디를 가든지 마음을 다해 가라." - 공자
-        </p>
-    </div>
-    <div>
-        <h3>출처 추가하기 (cite 속성)</h3>
-        <blockquote cite="https://namu.wiki/w/%EC%86%8D%EB%8B%B4">
-            "성공은 준비와 기회의 만남이다."
-        </blockquote>
-        <p>
-            "성공은 준비와 기회의 만남이다."
-        </p>
-    </div>
-    <dif>
-        <h3>스타일링</h3>
-        <p>
-            <style>
-                .bolockname {
-                    font-style: italic; /* 기울임꼴 */
-                    color: #555; /* 텍스트 색상 */
-                    border-left: 4px solid #ccc; /* 왼쪽 테두리 */
-                    padding-left: 16px; /* 텍스트와 테두리 간 간격 */
-                    margin: 16px 0; /* 위아래 여백 */
-                }
-            </style>
+        <div>
+            <h1>&lt;q&gt;</h1>
+            <p>
+                HTML의 &lt;q&gt; 요소는 짧은 인용문을 나타내는 데 사용됩니다.<br>
+                &lt;q&gt;를 사용하면 브라우저가 자동으로 인용문 주위에 **큰따옴표(" ")**를 추가합니다. <br>
+                    이는 긴 인용문에 사용되는 &lt;blockquote&gt;와는 다릅니다.<br>
+            </p>
+        </div>
+        <div>
+            <h3>주요 특징</h3> 
+                <tr>
+                    <th>1.용도:</th>
+                    <td>
+                        <ul>
+                            <li>짧은 문장이나 구절을 인용할 때 사용됩니다.</li>
+                            <li>자동으로 큰따옴표를 추가하여 인용문임을 명확히 나타냅니다.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2.자동 큰따옴표:</th>
+                    <td>
+                        <ul>
+                            <li>브라우저가 언어 설정(lang 속성)에 따라 적절한 큰따옴표 스타일을 렌더링합니다.</li>
+                            <li>예: 영어(US)에서는 " " 형식, 프랑스어에서는 « » 형식을 사용.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>3.짧은 인용문에 적합:</th>
+                    <td>
+                        <ul>
+                            <li> 긴 인용문에는 &lt;blockquote&gt;를 사용하는 것이 더 적절합니다.</li>
+                        </ul>
+                    </td>
+                </tr>
+        </div>
+        <div>
+            <h3>기본예제</h3>
+            <p>그는 이렇게 말했다: <q>노력은 배신하지 않는다.</q></p>
+            <p>그는 이렇게 말했다: 노력은 배신하지 않는다.</p>
+        </div>
+        <div>
+            <h3>스타일링</h3>
             
-            <blockquote id="bolockname">
-                "행동이 항상 행복을 가져오지는 않지만, 행동 없이는 행복이 없다."
-            </blockquote>
-        </p>
-    </dif>
+                <style>
+                    #qname {
+                        quotes: "‘" "’" "“" "”"; /* 큰따옴표 스타일 변경, none 가능*/
+                        color: #ff00ff; /* 텍스트 색상 */
+                        font-style: italic; /* 기울임꼴 */
+                    }
+                </style>
+                
+                <p>그는 이렇게 말했다: <q id="qname">행복은 선택이다.</q></p>
+            
+        </div>
+    </div>
 </body>
 </html>
