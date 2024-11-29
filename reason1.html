@@ -3,54 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
     <div>
-      <div style="margin: 50px;">
-        <style>
-            body{
-                background-image: url('./image/orange.webp');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: 100%100%;
-            }
-            b{
-                color: blue;
-                size: 10px;
-            }
-        </style>
-            <h1>배경 이미지 다루기</h1>
-            <p>배경 이미지가 요소보다 작으면 이미지는 요소의 끝에 도달할 때까지 수평 및 수직으로 반복됩니다.<br>
-                배경 이미지가 반복되는 것을 방지하려면 속성을 . <b>background-repeat</b>으로 설정합니다.<b>no-repeat</b>
-            </p>
-      </div>
-      <div>
-        <h1>배경커버</h1>
+      <div style="margin-bottom: 50px;">
+        <h1>HTML &lt;picture&gt; 요소</h1>
         <p>
-            배경 이미지가 전체 요소를 덮도록 하려면 <b>background-size</b>속성을 다음과 같이 설정할 수 있습니다.<b>cover</b>.<br>
-            또한 전체 요소가 항상 포함되어 있는지 확인하려면 <b>background-attachment</b>속성을 다음과 같이 설정합니다.<b>fixed</b><br>
-            이렇게 하면 배경 이미지가 늘어나지 않고 전체 요소를 덮게 됩니다(이미지는 원래 비율을 유지합니다).<br>
-            배경 이미지를 전체 요소에 맞게 늘리려면 <b>background-size</b>속성을 다음과 같이 설정하면 됩니다 <b>100% 100%.</b>
+            HTML &lt;picture&gt;요소는 웹 개발자에게 이미지 리소스를 지정하는 데 더 많은 유연성을 제공합니다.<br>
+            요소 &lt;picture&gt;에는 하나 이상의 &lt;source&gt;요소가 포함되어 있으며, 각각은 속성을 통해 다른 이미지를 참조합니다 <b>srcset </b>.<br>
+            이런 방식으로 브라우저는 현재 뷰 및/또는 장치에 가장 적합한 이미지를 선택할 수 있습니다.<br>
+            각 &lt;source&gt;요소에는 media이미지가 가장 적합한 시점을 정의하는 속성이 있습니다.
         </p>
       </div>
-      <div>
-        <h2>현재 상태</h2>
-        <pre style="color: blue;">
-            &lt;style&gt;
-                body{
-                    background-image: url('./image/orange.webp');
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-size: 100%100%;
-                }
-                b{
-                    color: blue;
-                    size: 10px;
-                }
-                &lt;/style&gt;
-        </pre>
+      <div style="margin-bottom: 50px;">
+        <h1>예시</h1>
+        <p>
+            <picture>
+                <source media="(min-width: 650px)" srcset="./image/orange.webp">
+                <source media="(min-width: 465px)" srcset="./image/cellphone.jpg">
+                <img src="./image/mac.jpg">
+            </picture>
+            <p>
+                브라우저 크기를 조정하여 다양한 뷰포트 크기에서 로딩되는 다양한 버전의 사진을 확인합니다.<br>
+                 브라우저는 미디어 쿼리가 사용자의 현재 뷰포트 너비와 일치하는 첫 번째 소스 요소를 찾고 srcset 속성에 지정된 이미지를 가져옵니다.<br>
+                 개발자 모드로 화면을 조성해서 사진의 변화를 관찰해 봅시다.
+            </p>
+            <p> 
+                참고: 항상 &lt;img&gt;요소를 요소의 마지막 자식 요소로 지정하세요 &lt;picture&gt;. <br>
+                <img>요소는 요소를 지원하지 않는 브라우저에서 사용되거나 태그가 &lt;picture&gt;하나도 &lt;source&gt;일치하지 않는 경우 사용됩니다.
+            </p>
+        </p>
       </div>
     </div>
 </body>
