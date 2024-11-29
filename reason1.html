@@ -8,63 +8,36 @@
 </head>
 <body>
     <div>
-        <div>
-            <h1>이미지 맵 &lt;map&gt;</h1>
-            <p>
-                HTML &lt;map&gt;태그는 이미지 맵을 정의합니다.<br>
-                이미지 맵은 클릭 가능한 영역이 있는 이미지입니다. <br>
-                영역은 하나 이상의 &lt;area&gt;태그로 정의됩니다.<br>
-                아래 이미지에서 컴퓨터, 휴대전화 또는 커피잔을 클릭해 보세요.
-            </p>
-        </div>
-        <div>
-            <img src="./image/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
-
-            <map name="workmap">
-                <area shape="rect" coords="34,44,270,350" alt="Computer" href="./Computer.html">
-                <area shape="rect" coords="290,172,333,250" alt="Phone" href="./Phone.html">
-                <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="./Coffee.html">
-            </map>
-        </div>
-        <div>
-            <h1>작동 원리</h1>
-            <p>
-                <strong>1.usemap</strong><br>
-                 usemap은 해시태그로 시작하고 #그 뒤에 이미지 맵의 이름이 붙으며,
-                 이미지와 이미지 맵 간의 관계를 생성하는 데 사용됩니다.
-                 <pre>
-                    &lt;map name="workmap"&gt;&lt;/map&gt;
-                 </pre>
-            </p>
-            <p>
-                <strong>2.area</strong><br>
-                그런 다음 클릭할 수 있는 영역을 추가합니다.<br>
-                클릭 가능한 영역은 &lt;area&gt;요소를 사용하여 정의됩니다.
-            </p>
-           
-                <strong>2-1.shape</strong><br>
-                클릭 가능한 영역의 모양을 정의해야 하며 다음 값 중 하나를 선택할 수 있습니다.
-                <ul>
-                    <li>rect- 직사각형 영역을 정의합니다</li>
-                    <li>circle- 원형 영역을 정의합니다</li>
-                    <li>poly- 다각형 영역을 정의합니다</li>
-                    <li>default- 전체 지역을 정의합니다</li>
-                </ul>
-            </p>
-            <p>
-                <strong>2-2.coords</strong><br>
-                원하는 영역을 정합니다. 
-                <ul>
-                    <li> rect (사각형 영역)
-                        형식: coords="x1, y1, x2, y2"</li>
-                    <li> circle (원형 영역)
-                        형식: coords="x, y, r"</li>
-                    <li> poly (다각형 영역)
-                        형식: coords="x1, y1, x2, y2, x3, y3, ..."</li>
-                </ul>
-                보통 포토샵,Paint,Image Map Generator 등 도구를 사용하여 값을 구할 수 있다.
-            </p>
-        </div>
+      <div style="margin: 50px;">
+        <h1>배경 이미지</h1>
+        <p>HTML 요소에 배경 이미지를 추가하려면 HTML style속성과 CSS background-image속성을 사용합니다.</p>
+      </div>
+      <div style="background-image: url('./image/orange.webp'); margin: 50px;">
+        <h1>간단한 예시</h1>
+        <p>글자를</p>
+        <p>늘려</p>
+        <p>써보</p>
+        <p>앗</p>
+        <p>습니다</p>
+      </div>
+      <div style="margin: 50px;">
+        <style>
+            h2{
+                background-image: url('./image/cellphone.jpg');
+            }
+            body{
+                background-image: url('./image/coffeehouse2.jpg');
+            }
+        </style>
+        <h2>
+            섹션이나 전체페이지 (body)에도 배경 이미지를 지정할 수 있습니다.<br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </h2>
+      </div>
     </div>
 </body>
 </html>
