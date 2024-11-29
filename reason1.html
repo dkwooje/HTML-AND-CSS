@@ -8,10 +8,15 @@
 <body>
     <div>
         <div>
-            <h1>CSS 테이블 정렬</h1>
+            <h1>CSS 테이블 스타일</h1>
+        </div>
+        <div>
+            <h1>테이블 패딩</h1>
+            <p>표의 테두리와 내용 사이의 공간을 제어하려면 padding&lt;td&gt; 및 &lt;th&gt; 요소의 속성을 사용합니다.</p>
             <style>
-                #table1,#table1 td,#table1 th {
-                  border: 1px solid black;
+                #table1,#table1 td,#table1 th {  
+                  border: 1px solid #ddd;
+                  text-align: left;
                 }
                 
                 #table1 {
@@ -19,21 +24,10 @@
                   width: 100%;
                 }
                 
-                #table1 td {
-                  text-align: center;
-                }
-                #table1 th {
-                    text-align: left;
+                #table1 th,#table1 td {
+                  padding: 15px;
                 }
             </style>
-        </div>
-        <div>
-            <h2>수평 정렬</h2>
-            <p>text-align속성은 &lt;th&gt; 또는 &lt;td&gt;에 있는 콘텐츠의 수평 정렬(왼쪽, 오른쪽 또는 중앙)을 설정합니다.<br>
-                기본적으로 &lt;th&gt; 요소의 콘텐츠는 중앙 정렬되고, &lt;td&gt; 요소의 콘텐츠는 왼쪽 정렬됩니다.<br>
-                &lt;td&gt; 요소의 내용도 중앙 정렬하려면 다음을 사용합니다 <b style="color: red;"> text-align: center.</b><br>
-                콘텐츠를 왼쪽 정렬하려면 다음 속성을 사용하여 &lt;th&gt; 요소의 정렬을 왼쪽 정렬로 강제합니다 text-align: left.
-            </p>
             <table id="table1">
                 <tr>
                   <th>Firstname</th>
@@ -60,35 +54,28 @@
                   <td>Brown</td>
                   <td>$250</td>
                 </tr>
-              </table>
+              </table>    
         </div>
         <div>
-            <h2>수직 정렬</h2>
-            <p>
-                이 vertical-align속성은 &lt;th&gt; 또는 &lt;td&gt;의 콘텐츠의 수직 정렬(예: 위쪽, 아래쪽 또는 가운데)을 설정합니다.
-                기본적으로 표의 콘텐츠의 수직 정렬은 가운데입니다(&lt;th&gt; 및 &lt;td&gt; 전부).
-                다음 예제에서는 &lt;td&gt; 요소의 세로 텍스트 정렬을 아래쪽으로 설정합니다.
-            </p>
+            <h1>수평 분할선</h1>
+            <p>border-bottom을 사용하여 수평 구분선을 만듭니다.</p>
             <style>
-                #table2, #table2 td, #table2 th {
-                  border: 1px solid black;
-                }
-                
                 #table2 {
                   border-collapse: collapse;
                   width: 100%;
                 }
                 
-                #table2 td {
-                  height: 50px;
-                  vertical-align: top;
+                #table2 th, #table2 td {
+                  padding: 8px;
+                  text-align: left;
+                  border-bottom: 1px solid #ddd;
                 }
-                </style>
+            </style>
             <table id="table2">
                 <tr>
                   <th>Firstname</th>
                   <th>Lastname</th>
-                  <th>Savings</th>
+                <th>Savings</th>
                 </tr>
                 <tr>
                   <td>Peter</td>
@@ -110,7 +97,147 @@
                   <td>Brown</td>
                   <td>$250</td>
                 </tr>
-              </table>    
+              </table>
+        </div>
+        <div>
+            <h1>호버블 테이블</h1>
+            <p>:hover마우스를 올리면 테이블 행이 강조 표시됩니다.</p>
+            <style>
+                #table3 {
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+                
+                #table3 th, #table3 td {
+                  padding: 8px;
+                  text-align: left;
+                  border-bottom: 1px solid #ddd;
+                }
+                
+                #table3 tr:hover {background-color: coral;}
+            </style>
+            <table id="table3">
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Points</th>
+                </tr>
+                <tr>
+                  <td>Peter</td>
+                  <td>Griffin</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>Lois</td>
+                  <td>Griffin</td>
+                  <td>$150</td>
+                </tr>
+                <tr>
+                  <td>Joe</td>
+                  <td>Swanson</td>
+                  <td>$300</td>
+                </tr>
+                <tr>
+                  <td>Cleveland</td>
+                  <td>Brown</td>
+                  <td>$250</td>
+                </tr>
+              </table>
+        </div>
+        <div>
+            <h1>줄무늬 테이블</h1>
+            <p>얼룩말 무늬 테이블의 경우 선택기를 사용하여 모든 짝수(또는 홀수) 테이블 행에 nth-child()를 추가합니다 .</p>
+            <p>짝수(even), 홀수(odd)</p>
+            <style>
+                #table4 {
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+                
+                #table4 th,#table4 td {
+                  text-align: left;
+                  padding: 8px;
+                }
+                
+                #table4 tr:nth-child(even) {background-color: #f2f2f2;}
+                </style>
+            <table id="table4">
+                <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Points</th>
+                </tr>
+                <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$100</td>
+                </tr>
+                <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+                </tr>
+                <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+                </tr>
+                <tr>
+                <td>Cleveland</td>
+                <td>Brown</td>
+                <td>$250</td>
+                </tr>
+              </table>
+        </div>
+        <div>
+            <h1>테이블 색상</h1>
+            <p>요소의 배경색과 텍스트 색상을 지정합니다.</p>
+            <style>
+                #table5 {
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+                
+                #table5 th,#table5 td {
+                  text-align: left;
+                  padding: 8px;
+                }
+                
+                #table5 tr:nth-child(odd){background-color: gold}
+                
+                #table5 th {
+                  background-color: #04AA6D;
+                  color: white;
+                }
+
+                </style>
+                <table id="table5">
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Savings</th>
+                    </tr>
+                    <tr>
+                      <td>Peter</td>
+                      <td>Griffin</td>
+                      <td>$100</td>
+                    </tr>
+                    <tr>
+                      <td>Lois</td>
+                      <td>Griffin</td>
+                      <td>$150</td>
+                    </tr>
+                    <tr>
+                      <td>Joe</td>
+                      <td>Swanson</td>
+                      <td>$300</td>
+                    </tr>
+                    <tr>
+                      <td>Cleveland</td>
+                      <td>Brown</td>
+                      <td>$250</td>
+                  </tr>
+                  </table>
         </div>
     </div>
 </body>
