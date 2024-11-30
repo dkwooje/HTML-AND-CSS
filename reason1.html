@@ -3,62 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
     </style>
 </head>
 <body>
   <div>
     <div>
-      <h1>자바스크립트</h1>
-      <p>JavaScript는 HTML 페이지를 더욱 동적이고 대화형으로 만들어줍니다.</p>
-    </div>
-    <div>
-      <h1>HTML &lt;script&gt; 태그</h1>
+      <h1>Head 요소들</h1>
       <p>
-        HTML &lt;script&gt;태그는 클라이언트 측 스크립트(JavaScript)를 정의하는 데 사용됩니다.<br>
-        요소 &lt;script&gt;는 스크립트 문을 포함하거나 src속성을 통해 외부 스크립트 파일을 가리킵니다.<br>
-        JavaScript의 일반적인 용도로는 이미지 조작, 양식 검증, 콘텐츠의 동적 변경 등이 있습니다.<br>
-        HTML 요소를 선택하기 위해 JavaScript는 가장 자주 다음 document.getElementById()방법을 사용합니다.
+        HTML &lt;head&gt;요소는 다음 요소의 컨테이너입니다: <br>
+        &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, 및 &lt;base&gt;. 
       </p>
+      <p>&lt;head&gt; : 메타데이터(데이터에 대한 데이터)를 담는 컨테이너로, &lt;html&gt;태그와 &lt;body&gt;태그 사이에 배치됩니다.</p>
+      <p>요소는 &lt;title&gt;문서의 제목을 정의합니다. 제목은 텍스트 전용이어야 하며 브라우저의 제목 표시줄이나 페이지 탭에 표시됩니다.</p>
+      <p>&lt;style&gt;요소는 단일 HTML 페이지에 대한 스타일 정보를 정의하는 데 사용됩니다.</p>
+      <p>&lt;link&gt;요소는 현재 문서와 외부 리소스 간의 관계를 정의합니다. 이 &lt;link&gt; 태그는 외부 스타일 시트에 연결하는 데 가장 자주 사용됩니다.</p>
     </div>
     <div>
-      <h1>예제 1</h1>
+      <h1>meta</h1>
+      <p>&lt;meta&gt;요소는 일반적으로 문자 집합, 페이지 설명, 키워드, 문서 작성자 및 뷰포트 설정을 지정하는 데 사용됩니다.</p>
       <p>
-        <p id="demo1">This is a demonstration.</p>
-        <button type="button" onclick="myFunction()">Click Me!</button>
-        <script>
-          function myFunction(){
-            document.getElementById("demo1").innerHTML = "Hello JavaScript!";
-          }
-        </script>
-      </p>
-    </div>
-    <div>
-      <h1>예제 2</h1>
-      <p id="demo2">JavaScript can change the style of an HTML element.</p>
-      <script>
-        function function2(){
-          document.getElementById('demo2').style.fontSize = "25px";
-          document.getElementById('demo2').style.color = 'red';
-          document.getElementById('demo2').style.backgroundColor = 'yellow';
-        }
-      </script>
-      <button type="button" onclick="function2()">Click!</button>
-    </div>
-    <div>
-      <h1>HTML &lt;noscript&gt; 태그</h1>
-      <p>
-        HTML &lt;noscript&gt;태그는 브라우저에서 스크립트를 비활성화했거나 스크립트를 지원하지 않는 브라우저를 사용하는 사용자에게 표시되는 대체 콘텐츠를 정의합니다.<br>
-        아래 코드는 이 예시입니다.
-      </p>
-      <p id="demo3"></p>
-      <script>
-        document.getElementById("demo").innerHTML = "Hello JavaScript!";
-      </script>
+        예시: <br>
+        <xmp>
+        사용되는 문자 집합을 정의합니다:
+        <meta charset="UTF-8">
 
-      <noscript>Sorry, your browser does not support JavaScript!</noscript>
+        검색 엔진을 위한 키워드 정의:
+       <meta name="keywords" content="HTML, CSS, JavaScript">
 
-      <p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+        웹 페이지에 대한 설명을 정의하세요.
+        <meta name="description" content="Free Web tutorials">
+
+       페이지의 작성자를 정의하세요:
+       <meta name="author" content="John Doe">
+
+       30초마다 문서 새로 ​​고침:
+        <meta http-equiv="refresh" content="30">
+
+        모든 기기에서 웹사이트가 잘 보이도록 뷰포트 설정:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </xmp>
+      </p>
+    </div>
+    <div>
+      <h1>뷰포트 설정</h1>
+      <p>
+        뷰포트는 웹 페이지에서 사용자가 볼 수 있는 영역입니다. 기기에 따라 다릅니다. 모바일 폰에서는 컴퓨터 화면보다 더 작습니다.
+        &lt;meta&gt;모든 웹 페이지에 다음 요소를 포함해야 합니다 .
+        <xmp>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </xmp>
+      </p>
+    </div>
+    <div>
+      <h1>HTML &lt;base&gt; 요소</h1>
+      <p>
+        해당 &lt;base&gt;요소는 페이지의 모든 상대 URL에 대한 기본 URL 및/또는 대상을 지정합니다.
+        태그 &lt;base&gt;에는 href 또는 target 속성이 둘 다 있어야 합니다.
+        &lt;base&gt; 문서에는 단 하나의 요소만 포함될 수 있습니다 !
+      </p>
+      <p>
+        예시: <br>
+        <xmp>
+          <head>
+            <base href="https://www.w3schools.com/" target="_blank">
+          </head>
+        </xmp>
+      </p>
     </div>
   </div>
 </body>
