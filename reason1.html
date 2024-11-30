@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-          box-sizing: border-box;
-        }
-        
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        /* Style the header */
-        header {
-          background-color: #666;
-          padding: 30px;
-          text-align: center;
-          font-size: 35px;
-          color: white;
-        }
-        
-        /* Create two columns/boxes that floats next to each other */
-        nav {
-          float: left;
-          width: 30%;
-          height: 300px; /* only for demonstration, should be removed */
-          background: #ccc;
-          padding: 20px;
-        }
-        
-        /* Style the list inside the menu */
-        nav ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        
-        article {
-          float: left;
-          padding: 20px;
-          width: 70%;
-          background-color: #2042ff;
-          height: 300px; /* only for demonstration, should be removed */
-        }
-        
-        /* Clear floats after the columns */
-        section::after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        
-        /* Style the footer */
-        footer {
-          background-color: #777;
-          padding: 10px;
-          text-align: center;
-          color: white;
-        }
-        
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-          nav, article {
-            width: 100%;
-            height: auto;
-          }
-        }
-    </style>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
 </head>
 <body>
-   
-<h2>CSS 플로트 레이아웃</h2>
-<p>
-CSS 속성을 사용하여 전체 웹 레이아웃을 만드는 것이 일반적입니다 float.<br>
- Float는 배우기 쉽습니다. float및 clear속성이 어떻게 작동하는지 기억하기만 하면 됩니다.<br>
-  단점: 플로팅 요소는 문서 흐름에 묶여 있어 유연성에 해를 끼칠 수 있습니다. <br>
-  CSS Float and Clear 장 에서 float에 대해 자세히 알아보세요 .<br>
-</p>
+
+<h2>CSS Layout Flexbox</h2>
+<p>Flexbox를 사용하면 페이지 레이아웃이 다양한 화면 크기와 다양한 디스플레이 장치를 수용해야 할 때에도 요소가 예측 가능하게 동작하도록 할 수 있습니다.</p>
 
 <header>
   <h2>Cities</h2>
@@ -102,5 +97,6 @@ CSS 속성을 사용하여 전체 웹 레이아웃을 만드는 것이 일반적
 <footer>
   <p>Footer</p>
 </footer>
+
 </body>
 </html>
