@@ -4,27 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-      }
     </style>
 </head>
 <body>
+  <div>
     <div>
-      <h1>Iframe</h1>
-      <p>HTML iframe은 웹 페이지 내에서 웹 페이지를 표시하는 데 사용됩니다.</p>
-      <iframe src="./reason2.html" style="border: none;" height="500" width="700" title="Iframe Example" name="iframe_a"></iframe>
+      <h1>자바스크립트</h1>
+      <p>JavaScript는 HTML 페이지를 더욱 동적이고 대화형으로 만들어줍니다.</p>
     </div>
     <div>
-      <h1>Iframe - 링크 대상</h1>
+      <h1>HTML &lt;script&gt; 태그</h1>
       <p>
-        iframe은 링크의 대상 프레임으로 사용될 수 있습니다.<br>
-        <b style="color: red;">target</b>링크의 속성은 iframe의 <b style="color: red;">name</b>속성을 참조해야 합니다 .
+        HTML &lt;script&gt;태그는 클라이언트 측 스크립트(JavaScript)를 정의하는 데 사용됩니다.<br>
+        요소 &lt;script&gt;는 스크립트 문을 포함하거나 src속성을 통해 외부 스크립트 파일을 가리킵니다.<br>
+        JavaScript의 일반적인 용도로는 이미지 조작, 양식 검증, 콘텐츠의 동적 변경 등이 있습니다.<br>
+        HTML 요소를 선택하기 위해 JavaScript는 가장 자주 다음 document.getElementById()방법을 사용합니다.
       </p>
-      <p><a href="./reason3.html" target="iframe_a">reason3</a></p>
-      <p><a href="./reason2.html" target="iframe_a">reason2</a></p>
     </div>
+    <div>
+      <h1>예제 1</h1>
+      <p>
+        <p id="demo1">This is a demonstration.</p>
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <script>
+          function myFunction(){
+            document.getElementById("demo1").innerHTML = "Hello JavaScript!";
+          }
+        </script>
+      </p>
+    </div>
+    <div>
+      <h1>예제 2</h1>
+      <p id="demo2">JavaScript can change the style of an HTML element.</p>
+      <script>
+        function function2(){
+          document.getElementById('demo2').style.fontSize = "25px";
+          document.getElementById('demo2').style.color = 'red';
+          document.getElementById('demo2').style.backgroundColor = 'yellow';
+        }
+      </script>
+      <button type="button" onclick="function2()">Click!</button>
+    </div>
+    <div>
+      <h1>HTML &lt;noscript&gt; 태그</h1>
+      <p>
+        HTML &lt;noscript&gt;태그는 브라우저에서 스크립트를 비활성화했거나 스크립트를 지원하지 않는 브라우저를 사용하는 사용자에게 표시되는 대체 콘텐츠를 정의합니다.<br>
+        아래 코드는 이 예시입니다.
+      </p>
+      <p id="demo3"></p>
+      <script>
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+      </script>
+
+      <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+      <p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+    </div>
+  </div>
 </body>
 </html>
