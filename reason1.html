@@ -8,52 +8,71 @@
 <body>
     <div>
       <div>
-        <h1>&lt;radio&gt; 버튼</h1>
-        <p>라디오 버튼을 사용하면 사용자는 제한된 수의 선택 사항 중 하나를 선택할 수 있습니다.</p>
-        <form>
-          <input type="radio" id="html" name="fav_language" value="HTML">
-          <label for="html">HTML</label><br>
-          <input type="radio" id="css" name="fav_language" value="CSS">
-          <label for="css">CSS</label><br>
-          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-          <label for="javascript">JavaScript</label>
-        </form>
-      </div>
-      <div>
-        <h1>checkbox</h1>
-        <p>체크박스를 이용하면 사용자는 제한된 수의 선택 항목 중에서 0개 또는 그 이상을 선택할 수 있습니다.</p>
-        <form>
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-          <label for="vehicle1">I have a bike</label><br>
-          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-          <label for="vehicle2">I have a car</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="boat">
-          <label for="vehicle3">I have a boat</label>
-        </form>
-      </div>
-      <div>
-        <h1>submit</h1>
-        <p>양식 처리기에 양식 데이터를 제출하기 위한 버튼을 정의합니다. 폼 핸들러는 폼의 action 속성에 지정됩니다.</p>
-        <form action="./image/orange.webp">
+        <h1>action</h1>
+        <p>
+          속성 은 action양식이 제출될 때 수행할 작업을 정의합니다.<br>
+          일반적으로, 사용자가 제출 버튼을 클릭하면 양식 데이터가 서버의 파일에 전송됩니다.<br>
+          submit을 누르고 url의 변화를 확인해 봅시다.
+        </p>
+        <form action="./image/mac.jpg">
           <label for="fname">First name:</label><br>
           <input type="text" id="fname" name="fname" value="John"><br>
           <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname" value="Doe"><br>
+          <input type="text" id="lname" name="lname" value="Doe"><br><br>
           <input type="submit" value="Submit">
         </form>
       </div>
       <div>
-        <h1>input과 name 속성</h1>
+        <h1>target</h1>
         <p>
-          각 입력 필드에는 name제출할 속성이 있어야 합니다.<br>
-          속성이 생략 되면 name입력 필드의 값이 전혀 전송되지 않습니다.
+          해당 target속성은 양식을 제출한 후 수신된 응답을 표시할 위치를 지정합니다.<br>
+          속성 target은 다음 값 중 하나를 가질 수 있습니다.
         </p>
-        <form action="./image/coffeehouse2.jpg">
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" value="John"><br><br>
+        <table>
+          <tr>
+            <th>value</th>
+            <th>description</th>
+          </tr>
+            <tr>
+              <td>_blank</td>
+              <td>응답이 새 창이나 새 탭에 표시됩니다.</td>
+            </tr>
+            <tr>
+              <td>_self</td>
+              <td> 응답이 현재 창에 표시됩니다.
+              </td>
+            </tr>
+            <tr>
+              <td>_parent</td>
+              <td> 응답이 부모 프레임에 표시됩니다. (웹 페이지가 다른 프레임을 포함하고 있을 때, 그 부모 프레임에 응답이 표시됨)</td>
+            </tr>
+            <tr>
+              <td>_top</td>
+              <td>응답이 창의 전체 본문에 표시됩니다.</td>
+            </tr>
+            <tr>
+              <td>framename</td>
+              <td> 응답이 특정 이름을 가진 iframe(내부 프레임) 안에 표시됩니다.</td>
+            </tr>
+        </table>
+        <form action="./image/cellphone.jpg" target="_blank" style="display: inline-block; margin-right: 10px;">
           <input type="submit" value="Submit">
-        </form>
-      </div>
+        </form> 
+        <form action="./image/cellphone.jpg" target="_self" style="display: inline-block; margin-right: 10px;">
+          <input type="submit" value="Submit">
+        </form> 
+        <form action="./image/cellphone.jpg" target="_parent" style="display: inline-block; margin-right: 10px;">
+          <input type="submit" value="Submit">
+        </form> 
+        <form action="./image/cellphone.jpg" target="_top" style="display: inline-block; margin-right: 10px;">
+          <input type="submit" value="Submit">
+        </form> 
+        <form action="./image/cellphone.jpg" target="framename" style="display: inline-block; margin-right: 10px;">
+          <input type="submit" value="Submit">
+        </form> 
+    </div>
+    <div>
+      
     </div>
 </body>
 </html>
