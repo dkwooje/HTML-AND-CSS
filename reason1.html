@@ -8,64 +8,50 @@
 <body>
     <div>
       <div>
-        <h1>HTML 양식</h1>
+        <h1>&lt;radio&gt; 버튼</h1>
+        <p>라디오 버튼을 사용하면 사용자는 제한된 수의 선택 사항 중 하나를 선택할 수 있습니다.</p>
         <form>
-          <label>First name:</label><br>
-          <input type="text" id="fname" value="Jone"><br>
-          <label>Last name:</label><br>
-          <input type="text" id="lname" value="Doe"><br>
-          <input type="submit" value="submit">
+          <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label>
         </form>
       </div>
       <div>
-        <h1>from 요소</h1>
-        <p>HTML &lt;form&gt;요소는 사용자 입력을 위한 HTML 양식을 만드는 데 사용됩니다.</p>
-        <p>요소 &lt;form&gt;는 텍스트 필드, 체크박스, 라디오 버튼, 제출 버튼 등 다양한 유형의 입력 요소를 위한 컨테이너입니다.</p>
-      </div>
-      <div>
-        <h1>&lt;input&gt; 요소</h1>
-        <p>
-          HTML &lt;input&gt;요소는 가장 많이 사용되는 폼 요소입니다.
-          속성에 따라 요소 &lt;input&gt;는 여러 가지 방법으로 표시될 수 있습니다 type .
-          다음은 몇 가지 예입니다.
-        </p>
-        <table>
-          <thead style="background-color: aqua;">
-            <tr>
-              <th>유형</th>
-              <th>설명</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <ul style="list-style-type: none; background-color:antiquewhite;" >
-                  <li style="margin: 20px;">input type="text"</li>
-                  <li style="margin: 20px;">input type="radio"</li>
-                  <li style="margin: 20px;">input type="checkbox"</li>
-                  <li style="margin: 20px;">input type="submit"</li>
-                  <li style="margin: 20px;">input type="button"</li>
-                </ul>
-              </td>
-              <td>
-                <ul style="list-style-type: none; background-color: beige;">
-                  <li style="margin: 20px;">단일 줄 텍스트 입력 필드를 표시합니다</li>
-                  <li style="margin: 20px;">라디오 버튼(다양한 선택 항목 중 하나를 선택하기 위한)을 표시합니다.</li>
-                  <li style="margin: 20px;">체크박스를 표시합니다(여러 선택 항목 중 0개 이상을 선택하기 위한)</li>
-                  <li style="margin: 20px;">제출 버튼을 표시합니다(양식을 제출하기 위한)</li>
-                  <li style="margin: 20px;">클릭 가능한 버튼을 표시합니다</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <h1>텍스트 필드</h1>
-        <p>&lt;input type="text"&gt;텍스트 입력을 위한 단일 줄 입력 필드를 정의합니다.</p>
+        <h1>checkbox</h1>
+        <p>체크박스를 이용하면 사용자는 제한된 수의 선택 항목 중에서 0개 또는 그 이상을 선택할 수 있습니다.</p>
         <form>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1">I have a bike</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label for="vehicle2">I have a car</label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="boat">
+          <label for="vehicle3">I have a boat</label>
+        </form>
+      </div>
+      <div>
+        <h1>submit</h1>
+        <p>양식 처리기에 양식 데이터를 제출하기 위한 버튼을 정의합니다. 폼 핸들러는 폼의 action 속성에 지정됩니다.</p>
+        <form action="./image/orange.webp">
+          <label for="fname">First name:</label><br>
           <input type="text" id="fname" name="fname" value="John"><br>
-          <input type="text" id="lname" name="lname" value="Doe">
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" value="Doe"><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div>
+        <h1>input과 name 속성</h1>
+        <p>
+          각 입력 필드에는 name제출할 속성이 있어야 합니다.<br>
+          속성이 생략 되면 name입력 필드의 값이 전혀 전송되지 않습니다.
+        </p>
+        <form action="./image/coffeehouse2.jpg">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" value="John"><br><br>
+          <input type="submit" value="Submit">
         </form>
       </div>
     </div>
