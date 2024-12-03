@@ -8,11 +8,13 @@
 <body>
     <div>
       <div>
-        <p>readonly속성은 입력 필드가 읽기 전용임을 지정합니다.</p>
-        <p> 읽기 전용 입력 필드는 수정할 수 없습니다</p>
+        <p>disabled속성은 입력 필드를 비활성화해야 함을 지정합니다.</p>
+        <p> 비활성화된 입력 필드는 사용할 수 없고 클릭할 수 없습니다.<br>
+            비활성화된 입력 필드의 값은 양식을 제출할 때 전송되지 않습니다!
+          </p>
         <form>
           <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname" value="John" readonly><br>
+          <input type="text" id="fname" name="fname" value="John" disabled><br>
           <label for="lname">Last name:</label><br>
           <input type="text" id="lname" name="lname" value="Doe"><br><br>
           <input type="submit" value="Submit">
