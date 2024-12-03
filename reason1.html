@@ -8,19 +8,14 @@
 <body>
     <div>
       <div>
-        <p>  min및 max속성은 입력 필드의 최소값과 최대값을 지정합니다.</p>
-        <p> min및 속성 max은 다음 입력 유형과 함께 작동합니다:number, range, date, datetime-local, month, time, week.<br>
+        <p>multiple속성은 사용자가 입력 필드에 두 개 이상의 값을 입력할 수 있음을 지정합니다.</p>
+        <p>이 multiple속성은 이메일, 파일 등의 입력 유형에서 작동합니다.<br>
           </p>
         <form>
-          <label for="datemax">Enter a date before 2000-01-01:</label>
-          <input type="date" id="datemax" name="datemax" max="2000-12-31"><br><br>
-        
-          <label for="datemin">Enter a date after 2020-01-01:</label>
-          <input type="date" id="datemin" name="datemin" min="2020-01-02"><br><br>
-          
-          <label for="quantity">Quantity (between 1 and 5):</label>
-          <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
-        
+          <label for="fileOne">Select file only one:</label>
+          <input type="file" id="fileOne" name="fileOne" ><br><br>
+          <label for="files">Select files :</label>
+          <input type="file" id="files" name="files" multiple><br><br>
           <input type="submit" value="Submit">
         </form>
       </div>
