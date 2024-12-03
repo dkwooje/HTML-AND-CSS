@@ -8,21 +8,14 @@
 <body>
     <div>
       <div>
-       <h1>output</h1>
-       <p>
-        output요소는 계산(예: 스크립트로 수행된 계산)의 결과를 나타냅니다.
-       </p>
-       <form action="/action_page.php"
-oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-  0
-  <input type="range" id="a" name="a" value="50">
-  100 +
-  <input type="number" id="b" name="b" value="50">
-  =
-  <output name="x" for="a b"></output>
-  <br><br>
-  <input type="submit">
-</form>
+        <h1>input : text</h1>
+        <form>
+          <label for="fname">FirstName:</label><br>
+          <input id="fname" name="fname" type="text"><br>
+          <label for="lname"></label><br>
+          <input id="lname" name="lname" type="text"><br>
+          <input type="submit" value="Submit">
+        </form>
       </div>
     </div>
 </body>
