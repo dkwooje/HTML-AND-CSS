@@ -10,19 +10,17 @@
       <div>
         <h1>form 속성</h1>
         <p>
-          이 속성의 값은 해당 속성이 속한 &lt;form&gt; 요소의 id 속성과 동일해야 합니다.
+          formaction속성은 양식이 제출될 때 입력을 처리할 파일의 URL을 지정합니다.<br>
+          이 속성은 form의 요소action의 속성 보다 우선합니다.
         </p>
-        <form id="form1">
+        <form action="./image/orange.webp">
           <label for="fname">First name:</label>
           <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
           <input type="submit" value="Submit">
+          <input type="submit" formaction="./image/coffeehouse2.jpg" value="Submit as Admin">
         </form>
-      
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname" form="form1"> 
-        <br>  
-        <p>&lt;form id="form1"&gt;의 id가 input의 form="form1로 연결"</p>     
-        <p>차이를 확인 하려면  input의 form="form1의 유무에 따른 url의 변화를 확인해봅니다.</p>
       </div>
     </div>
 </body>
